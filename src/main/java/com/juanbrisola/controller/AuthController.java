@@ -50,7 +50,7 @@ public class AuthController {
 
             User user = repository.findByUsername(username);
 
-            var token = "";
+            String token = "";
 
             if (user != null) {
                 token = tokenProvider.createToken(username, user.getRoles());
