@@ -11,7 +11,7 @@ public class WebConfig implements WebMvcConfigurer {
 
     /* Método criado para habilitar CORS na API. */
     public void addCorsMappings(CorsRegistry corsRegistry) {
-        corsRegistry.addMapping("/**").allowedMethods("GET", "POST", "PUT", "DELETE");
+        corsRegistry.addMapping("/**").allowedMethods("GET", "POST", "PUT");
     }
 
     /* Método criado para a API suportar tanto JSON quanto XML.
