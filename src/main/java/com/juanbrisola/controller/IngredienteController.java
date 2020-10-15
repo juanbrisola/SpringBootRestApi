@@ -18,12 +18,6 @@ public class IngredienteController {
     @Autowired
     private IngredienteService service;
 
-    @ApiOperation(value = "Cria um novo ingrediente")
-    @PostMapping(produces = {"application/json", "application/xml"}, consumes = {"application/json", "application/xml"})
-    public Ingrediente create(@RequestBody Ingrediente ingrediente) {
-        return service.create(ingrediente);
-    }
-
     @ApiOperation(value = "Busca todos os ingredientes")
     @GetMapping(produces = {"application/json", "application/xml"})
     public List<IngredienteVO> findAll() {
@@ -40,12 +34,6 @@ public class IngredienteController {
     @PutMapping(produces = {"application/json", "application/xml"}, consumes = {"application/json", "application/xml"})
     public IngredienteVO update(@RequestBody IngredienteVO ingrediente) {
         return service.update(ingrediente);
-    }
-
-    @ApiOperation(value = "Exclui um ingrediente específico pelo seu ID")
-    @DeleteMapping("/{id}")
-    public void delete(@PathVariable("id") Long id) {
-        service.delete(id);
     }
 
 }

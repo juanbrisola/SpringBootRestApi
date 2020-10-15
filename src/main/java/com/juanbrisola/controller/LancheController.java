@@ -18,12 +18,6 @@ public class LancheController {
     @Autowired
     private LancheService service;
 
-    @ApiOperation(value = "Cria um novo lanche")
-    @PostMapping(produces = {"application/json", "application/xml"}, consumes = {"application/json", "application/xml"})
-    public Lanche create(@RequestBody Lanche lanche) {
-        return service.create(lanche);
-    }
-
     @ApiOperation(value = "Busca todos os lanches")
     @GetMapping(produces = {"application/json", "application/xml"})
     public List<LancheVO> findAll() {
@@ -34,12 +28,6 @@ public class LancheController {
     @GetMapping(value = "/{id}", produces = {"application/json", "application/xml"})
     public LancheVO findById(@PathVariable("id") Long id) {
         return service.findById(id);
-    }
-
-    @ApiOperation(value = "Exclui um lanche específíco pelo seu ID")
-    @DeleteMapping("/{id}")
-    public void delete(@PathVariable("id") Long id) {
-        service.delete(id);
     }
 
 }

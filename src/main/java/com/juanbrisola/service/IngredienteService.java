@@ -17,11 +17,6 @@ public class IngredienteService {
     @Autowired
     IngredienteRepository repository;
 
-    public Ingrediente create(Ingrediente ingrediente) {
-        repository.save(ingrediente);
-        return ingrediente;
-    }
-
     public IngredienteVO findById(Long id) {
         Ingrediente ingrediente = repository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Nenhum registro encontrado para esse ID"));
@@ -39,13 +34,6 @@ public class IngredienteService {
         ingrediente.setDescricao(ingredienteVO.getDescricao());
         ingrediente.setValor(ingredienteVO.getValor());
         return DozerConverter.parseObject(repository.save(ingrediente), IngredienteVO.class);
-    }
-
-
-    public void delete(Long id) {
-        Ingrediente entity = repository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Nenhum registro encontrado para esse ID"));
-            repository.delete(entity);
     }
 
 }

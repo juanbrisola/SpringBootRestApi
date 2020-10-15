@@ -17,29 +17,14 @@ public class LancheService {
     @Autowired
     LancheRepository repository;
 
-    public Lanche create(Lanche lanche) {
-        repository.save(lanche);
-        return lanche;
-    }
-
     public LancheVO findById(Long id) {
         Lanche lanche = repository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Nenhum registro encontrado para esse ID"));
-//        LancheVO lancheVO = new LancheVO();
-//        lancheVO.setKey(entity.getId());
-//        lancheVO.setNome(entity.getNome());
-//        lancheVO.setLancheIngredienteList(entity.getLancheIngredienteList());
         return DozerConverter.parseObject(lanche, LancheVO.class);
     }
 
     public List<LancheVO> findAll() {
         return DozerConverter.parseListObjects(repository.findAll(), LancheVO.class);
-    }
-
-    public void delete(Long id) {
-        Lanche lanche = repository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Nenhum registro encontrado para esse ID"));
-        repository.delete(lanche);
     }
 
 }
