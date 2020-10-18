@@ -26,7 +26,7 @@ Back-end de uma aplicação para lanchonetes feito para estudos.
 ## Tecnologias que foram utilizadas no back-end:
 - Java 8;
 - Maven;
-- Spring Boot;
+- Spring Boot 2.1.3.RELEASE;
 - Spring Data JPA;
 - Spring Security e Token JWT;
 - Swagger;
