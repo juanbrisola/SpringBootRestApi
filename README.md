@@ -1,6 +1,6 @@
 # Lanchonete (Back-end)
 
-Back-end de uma aplicação para lanchonetes feito para estudos.
+Back-end de uma aplicação para lanchonetes feito para estudos. Foi utizada a arquitetura REST API.
 
 ## Para rodar o projeto na máquina, é necessário ter instalado:
 - Java 8 para rodar o projeto back-end;
