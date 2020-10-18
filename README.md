@@ -13,8 +13,8 @@ Back-end de uma aplicação para lanchonetes feito para estudos.
 ## Para executar o projeto:
 - Clone esse repositório e o repositório do front-end:
 ```
-git clone https://github.com/juanbrisola/spring-boot-rest-api.git
-git clone https://github.com/juanbrisola/lanchonete-front.git
+git clone https://github.com/juanbrisola/lanchonete-back-end.git
+git clone https://github.com/juanbrisola/lanchonete-front-end.git
 ```
 - Em um database do MySQL chamado hamburgueria com Timezone UTC, usuário root e senha root, importe o Dump.sql localizado no repositório do back-end:
 ```
