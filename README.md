@@ -48,4 +48,3 @@ As três implementações citadas acima serão trabalhadas nas próximas semanas
 Observação: Durante o desenvolvimento do projeto, me deparei com alguns problemas relacionado ao CORS da aplicação, e a solução que eu implementei acabou atrapalhando no funcionamento do Token. Isso também será resolvido nas próximas semanas.
 
 Dúvidas, críticas ou sugestões: juan.brisola@outlook.com
-Obrigado!
