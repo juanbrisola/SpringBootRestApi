@@ -1,5 +1,6 @@
 package com.juanbrisola.controller;
 
+import com.juanbrisola.data.vo.CardapioVO;
 import com.juanbrisola.data.vo.PedidoVO;
 import com.juanbrisola.service.PedidoService;
 import io.swagger.annotations.Api;
@@ -20,5 +21,11 @@ public class PedidoController {
     @PostMapping(produces = {"application/json", "application/xml"}, consumes = {"application/json", "application/xml"})
     public PedidoVO calculaPedido(@RequestBody PedidoVO pedidoVO) {
         return pedidoService.calculaPedido(pedidoVO);
+    }
+
+    @ApiOperation(value = "Retorna um cardápio com todos os lanches e ingredientes disponíveis")
+    @GetMapping(path = "/cardapio", produces = {"application/json", "application/xml"})
+    public CardapioVO retornaCardapio() {
+        return pedidoService.retornaCardapio();
     }
 }

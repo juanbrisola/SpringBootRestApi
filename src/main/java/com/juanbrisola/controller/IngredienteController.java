@@ -1,6 +1,5 @@
 package com.juanbrisola.controller;
 
-import com.juanbrisola.data.model.Ingrediente;
 import com.juanbrisola.data.vo.IngredienteVO;
 import com.juanbrisola.service.IngredienteService;
 import io.swagger.annotations.Api;
@@ -24,15 +23,18 @@ public class IngredienteController {
         return service.findAll();
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @ApiOperation(value = "Busca um ingrediente específico pelo seu ID")
     @GetMapping(value = "/{id}", produces = {"application/json", "application/xml"})
     public IngredienteVO findById(@PathVariable("id") Long id) {
         return service.findById(id);
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @ApiOperation(value = "Altera um ingrediente específico")
-    @PutMapping(produces = {"application/json", "application/xml"}, consumes = {"application/json", "application/xml"})
-    public IngredienteVO update(@RequestBody IngredienteVO ingrediente) {
+    @PutMapping(value = "/{id}", produces = {"application/json", "application/xml"}, consumes = {"application/json", "application/xml"})
+    public IngredienteVO update(@PathVariable("id") Long id, @RequestBody IngredienteVO ingrediente) {
+        ingrediente.setKey(id);
         return service.update(ingrediente);
     }
 

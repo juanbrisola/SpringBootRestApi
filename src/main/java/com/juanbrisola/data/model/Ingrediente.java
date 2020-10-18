@@ -26,7 +26,7 @@ public class Ingrediente implements Serializable {
 
     @NotNull
     @NumberFormat(style = Style.CURRENCY, pattern = "#,##0.00")
-    @Column(nullable = false, columnDefinition = "DECIMAL(4,2) DEFAULT 0.00")
+    @Column(nullable = false, columnDefinition = "DECIMAL(6,2) DEFAULT 0.00")
     private BigDecimal valor;
 
     @OneToMany(mappedBy = "ingrediente")

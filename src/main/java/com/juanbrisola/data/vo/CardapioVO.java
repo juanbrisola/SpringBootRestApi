@@ -3,16 +3,15 @@ package com.juanbrisola.data.vo;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({"lanches", "totalPedido"})
-public class PedidoVO {
+@JsonPropertyOrder({"lanches", "ingredientes"})
+public class CardapioVO {
 
     private List<LancheVO> lanches;
 
-    private BigDecimal totalPedido;
+    private List<IngredienteVO> ingredientes;
 
     public List<LancheVO> getLanches() {
         return lanches;
@@ -22,12 +21,11 @@ public class PedidoVO {
         this.lanches = lanches;
     }
 
-    public BigDecimal getTotalPedido() {
-        return totalPedido;
+    public List<IngredienteVO> getIngredientes() {
+        return ingredientes;
     }
 
-    public void setTotalPedido(BigDecimal totalPedido) {
-        this.totalPedido = totalPedido;
+    public void setIngredientes(List<IngredienteVO> ingredientes) {
+        this.ingredientes = ingredientes;
     }
-
 }

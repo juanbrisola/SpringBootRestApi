@@ -1,16 +1,16 @@
 package com.juanbrisola.data.vo;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.github.dozermapper.core.Mapping;
 import com.juanbrisola.data.model.LancheIngrediente;
-import org.springframework.hateoas.ResourceSupport;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({"id", "descricao", "valor"})
 public class IngredienteVO {
 
