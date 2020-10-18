@@ -19,6 +19,7 @@ Back-end de uma aplicação para lanchonetes feito para estudos.
 - Após concluir o build, acesse a pasta target do projeto back-end e rode o comando java -jar spring-boot-rest-api-0.0.1-SNAPSHOT.jar
 - Em seguida, vá para o projeto front-end e acesse a pasta raiz do projeto
 - Rode o comando yarn start
+- Acesse: http://localhost:3000/login
 - Você irá se deparar com a tela de login. A aplicação ainda não possui cadastro de novos usuários, por conta disso, deixei pré-configurado um usuário "juan" com senha "admin123"
 - Para visualizar o swagger, acesse: http://localhost:8080/swagger-ui.html
 
