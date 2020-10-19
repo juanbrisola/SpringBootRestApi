@@ -16,10 +16,7 @@ Back-end de uma aplicação para lanchonetes feito para estudos. Foi utizada a a
 git clone https://github.com/juanbrisola/lanchonete-back-end.git
 git clone https://github.com/juanbrisola/lanchonete-front-end.git
 ```
-- Em um database do MySQL chamado hamburgueria com Timezone UTC, usuário root e senha root, importe o Dump.sql localizado no repositório do back-end:
-```
-spring-boot-rest-api/src/main/resources/Dump.sql
-```
+- Em um database do MySQL com Timezone UTC, usuário root e senha root, importe o Dump.sql localizado no repositório do back-end no seguinte diretório: spring-boot-rest-api/src/main/resources/Dump.sql
 - Em um terminal, acesse a pasta raiz do projeto back-end, onde fica localizado o pom.xml;
 - Rode o comando:
 ```
