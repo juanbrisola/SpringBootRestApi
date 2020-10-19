@@ -1,4 +1,4 @@
-CREATE DATABASE  IF NOT EXISTS `hamburgueria` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE  IF NOT EXISTS `hamburgueria` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `hamburgueria`;
 -- MySQL dump 10.13  Distrib 8.0.21, for Win64 (x86_64)
 --
@@ -29,7 +29,7 @@ CREATE TABLE `ingrediente` (
   `descricao` varchar(45) NOT NULL,
   `valor` decimal(6,2) NOT NULL DEFAULT '0.00',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -53,7 +53,7 @@ CREATE TABLE `lanche` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nome` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -82,7 +82,7 @@ CREATE TABLE `lanche_ingrediente` (
   KEY `fk_lanche_has_ingrediente_lanche_idx` (`lanche_id`),
   CONSTRAINT `fk_lanche_has_ingrediente_ingrediente1` FOREIGN KEY (`ingrediente_id`) REFERENCES `ingrediente` (`id`),
   CONSTRAINT `fk_lanche_has_ingrediente_lanche` FOREIGN KEY (`lanche_id`) REFERENCES `lanche` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -106,7 +106,7 @@ CREATE TABLE `permission` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `description` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -133,7 +133,7 @@ CREATE TABLE `user_permission` (
   KEY `fk_user_permission_permission` (`id_permission`),
   CONSTRAINT `fk_user_permission` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`),
   CONSTRAINT `fk_user_permission_permission` FOREIGN KEY (`id_permission`) REFERENCES `permission` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -163,7 +163,7 @@ CREATE TABLE `users` (
   `enabled` bit(1) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `uk_user_name` (`user_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
