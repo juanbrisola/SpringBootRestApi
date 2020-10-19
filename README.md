@@ -29,8 +29,9 @@ mvn clean package
 ```
 java -jar spring-boot-rest-api-0.0.1-SNAPSHOT.jar
 ```
-- Em seguida, vá para o projeto front-end e acesse a pasta raiz do projeto. Rode o comando:
+- Em seguida, vá para o projeto front-end e acesse a pasta raiz do projeto. Rode os comandos:
 ```
+yarn
 yarn start
 ```
 - Acesse: http://localhost:3000/login
