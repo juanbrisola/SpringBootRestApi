@@ -30,8 +30,8 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfo(
-                "RESTful API com Spring Boot 2.1.17",
-                "API desenvolvida para estudos.",
+                "RESTful API com Spring Boot 2.1.3",
+                "Back-end de uma aplicação web para lanchonetes. Desenvolvido para estudos.",
                 "1.0",
                 null,
                 new Contact("Juan Brisola", "http://www.github.com/juanbrisola", "juan.brisola@outlook.com"),

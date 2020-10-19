@@ -12,7 +12,7 @@
 	<artifactId>spring-boot-rest-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-boot-rest-api</name>
-	<description>Projeto REST API criado para estudos</description>
+	<description>Back-end de uma aplicação web para lanchonetes. Desenvolvido para estudos.</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
